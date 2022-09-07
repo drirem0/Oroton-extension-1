@@ -85,6 +85,10 @@ public class List extends ExtendM3Transaction {
     
   }
   
+  /*
+  * main method
+ */
+  
   public void main() {
     
     cono = mi.inData.get("CONO") == null ? '' : mi.inData.get("CONO").trim();
@@ -149,6 +153,10 @@ public class List extends ExtendM3Transaction {
     writePOEXT001(cono, divi, ait1, ait2, ait3, ait4, ait5, ait6, ait7, acdt);
     
   }
+  
+  /*
+  * validate input
+ */
   
   boolean validateInput() { 
     if (!cono.isEmpty()) {
@@ -287,7 +295,7 @@ public class List extends ExtendM3Transaction {
   
   }
   
-   /*
+  /*
   * releasedItemProcessor7 - Callback function
   *
   */
@@ -296,6 +304,11 @@ public class List extends ExtendM3Transaction {
   mi.outData.put("SINO", container7.get("F5SINO").toString());
   
   }
+ 
+ /*
+  * releasedItemProcessor2 - Callback function
+  *
+  */
  
   Closure<?> releasedItemProcessor2 = { DBContainer container2 ->
      
